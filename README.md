@@ -1,7 +1,7 @@
 # COVID-19 Detection 
 
 ## Overview
-This project involves developing a Convolutional Neural Network (CNN) model based on the VGG16 architecture to detect COVID-19 from X-ray images. The model was trained on a dataset with 148 examples and achieved an accuracy of 97.5%.
+This project involves developing a Convolutional Neural Network (CNN) model based on the ResNet50 architecture to detect COVID-19 from X-ray images. The model was trained on a dataset with 148 examples and achieved an accuracy of 97.5%.
 
 ## Files
 - `code.ipynb`: Contains all the code for data preprocessing, model training, and evaluation.
