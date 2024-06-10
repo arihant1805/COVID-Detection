@@ -1,6 +1,6 @@
-numpy
-uvicorn
-opencv-python
-tensorflow
-fastapi
-typing_extensions
+numpy==1.19.5
+uvicorn==0.16.0
+opencv-python==4.6.0.66
+tensorflow==2.6.2
+fastapi==0.76.0
+typing_extensions==3.7.4.3
