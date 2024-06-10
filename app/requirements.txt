@@ -1,6 +1,6 @@
-tensorflow
-keras
-opencv-python
-fastapi
-uvicorn
 numpy
+uvicorn==0.11.7
+tensorflow==2.3.0
+keras==2.3.1
+opencv-python-headless==4.2.0.32
+fastapi==0.63.0
