@@ -1,21 +1,26 @@
-import tensorflow as tf
-from fastapi import FastAPI, File
-from tensorflow.keras.models import load_model
+from fastapi import FastAPI , UploadFile, File
+import  tensorflow as tf
 import cv2 as cv
 import numpy as np
-
-model = load_model('model.h5')
+from typing_extensions import Dict
 
 app = FastAPI()
 
-@app.post("/")
-def check(file : File):
-    img = cv.resize(file, (256, 256))
-    img = np.array([img])
-    pred = model.predict(img)[0]
+model = tf.keras.models.load_model('model.h5')
 
-    if pred >= 0.5:
-        return {"You have corona."}
-    
-    else:
-        return {"You are healthy"}
+@app.get("/")
+def home():
+    return {"It is working."}
+
+@app.post("/predict")
+async def check(file:UploadFile) -> Dict[str,str]:
+    contents = await file.read()
+    np_img = np.fromstring(contents, np.uint8)
+    image = cv.imdecode(np_img, cv.IMREAD_COLOR)
+    file_resized = cv.resize(image, (256, 256))
+    file = np.array([file_resized])
+    pred=model.predict(file)
+    if pred[0] >= 0.5:
+        return {"msg": "COVID-19 found. Consult a docter"}
+    else :
+        return {"msg": "COVID-19 not found. You are fine!!"}
