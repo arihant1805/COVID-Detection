@@ -1,6 +1,6 @@
 FROM python:3.6.5-alpine
 COPY . /app
 WORKDIR /app/app
-RUN pip install --upgrade pip\
-    pip install -r requirements.txt
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 CMD ["uvicorn", "main:app"]
