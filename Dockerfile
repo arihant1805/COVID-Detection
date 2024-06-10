@@ -1,4 +1,5 @@
 FROM python:3.6.5-alpine
+RUN sudo apt-get update
 COPY . /app
 WORKDIR /app/app
 RUN pip install --upgrade pip
