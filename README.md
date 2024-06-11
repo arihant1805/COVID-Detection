@@ -8,7 +8,7 @@ This project involves End-to-end ML-project. from developing a Convolutional Neu
  The model was trained on a dataset with 148 examples and achieved an accuracy of 97.5%.
 
  ## Requirements
-  1. [GitHub](github.com)
+  1. [GitHub](https://github.com/)
  2. [Docker](https://www.docker.com/)
 
 ## Files
