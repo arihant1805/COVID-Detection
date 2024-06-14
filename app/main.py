@@ -1,8 +1,7 @@
-from fastapi import FastAPI , UploadFile, File
+from fastapi import FastAPI , UploadFile
 import  tensorflow as tf
 import cv2 as cv
 import numpy as np
-from typing_extensions import Dict
 
 app = FastAPI()
 
@@ -13,7 +12,7 @@ def home():
     return {"It is working."}
 
 @app.post("/predict")
-async def check(file:UploadFile) -> Dict[str,str]:
+async def check(file:UploadFile):
     contents = await file.read()
     np_img = np.fromstring(contents, np.uint8)
     image = cv.imdecode(np_img, cv.IMREAD_COLOR)
