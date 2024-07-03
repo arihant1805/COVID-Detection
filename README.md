@@ -32,7 +32,7 @@ This project involves End-to-end ML-project. from developing a Convolutional Neu
     2. **Open the Repository**: Go to the cloned repository
     3. **Run Docker Image**: use ```$ docker run covid-19-detection``` in the bash.
     4. **Check the FastAPI**: Check the API at the ```/predict/docs ```
-- ### Manualy :
+- ### Manually :
     1. **Clone the Repository**: [Clone this repository]('https://github.com/arihant1805/COVID-Detection.git')
     2. **Open the Repository**: Go to the cloned repository
     3. **Go to the app**:use  ```$ cd app``` in the bash.
