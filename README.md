@@ -1,6 +1,8 @@
 # COVID-19 Detection 
 
 ## Overview
+#### The project is live [here](https://covid-19-detection-1d3l.onrender.com/docs) check it out.
+
 This project involves End-to-end ML-project. from developing a Convolutional Neural Network (CNN) model based on the ResNet50 architecture to detect COVID-19 from X-ray images to building the API with the help if [FastAPI](https://fastapi.tiangolo.com/). with containerinzation using [Docker](https://www.docker.com/)
 
 <img src ="SampleImage.jpeg" width="75%">
