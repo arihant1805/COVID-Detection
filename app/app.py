@@ -4,7 +4,7 @@ from PIL import Image
 import io
 
 st.title("Upload the X-ray of the chest,for COVID-19 detection:")
-st.write("to try out download any image from [GitHub](https://github.com/arihant1805/COVID-Detection/blob/master/SampleImage.jpe) or from the [Kaggle DataSet](https://www.kaggle.com/datasets/khoongweihao/covid19-xray-dataset-train-test-sets)")
+st.write("to try out download any image from [Sample Image](https://github.com/arihant1805/COVID-Detection/blob/master/SampleImage.jpeg) or from the [Kaggle DataSet](https://www.kaggle.com/datasets/khoongweihao/covid19-xray-dataset-train-test-sets)")
 
 file = st.file_uploader("Choose a file")
 if file is not None:
