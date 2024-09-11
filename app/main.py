@@ -18,7 +18,6 @@ async def check(file:UploadFile):
     image_resized = image.resize((256, 256))
     file = np.array([image_resized])/255
     pred=model.predict(file, verbose=0)
-    print(pred.shape)
     if pred[0,0] >= 0.5:
         return {
             "msg": "COVID-19 found. Consult a docter",
