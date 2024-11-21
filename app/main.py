@@ -20,7 +20,7 @@ async def check(file:UploadFile):
     pred=model.predict(file, verbose=0)
     if pred[0,0] >= 0.5:
         return {
-            "msg": "COVID-19 found. Consult a docter",
+                "msg": "COVID-19 found. Consult a doctor",
             "code":1
             }
     else :
